@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-var module = angular.module('editor');
+angular.module('editor');
 
 
 module.controller('MainCtrl', ['$scope', '$location', '$routeParams', '$q', '$mdToast', 'drive', 'login', 'renameDialog', function ($scope, $location, $routeParams, $q,  $mdToast, drive, login, renameDialog) {
