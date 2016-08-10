@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-angular.module('editor');
+var module = angular.module('editor');
 
 
 module.controller('MainCtrl', ['$scope', '$location', '$routeParams', '$q', '$mdToast', 'drive', 'login', 'renameDialog', function ($scope, $location, $routeParams, $q,  $mdToast, drive, login, renameDialog) {
@@ -130,16 +130,21 @@ module.controller('MainCtrl', ['$scope', '$location', '$routeParams', '$q', '$md
     });
   };
 
+  var sendToOildex = function(){
+    //TODO implement file sending
+    showMessage("File sent to Oildex");
+  }
+
   /**
    * Handle the share click. Displays the Drive sharing dialog.
    */
-  this.shareFile = function($event) {
+  this.sendFile = function($event) {
     if($scope.file.metadata.id === null) {
         $scope.ctrl.renameFile($event).then(function() {
-          drive.showSharing($scope.file.metadata.id);
+          sendToOildex();
         });
     } else {
-      drive.showSharing($scope.file.metadata.id);
+      sendToOildex();
     }
   };
 
