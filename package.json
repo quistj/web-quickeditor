@@ -1,0 +1,10 @@
+{
+  "name": "editor",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
