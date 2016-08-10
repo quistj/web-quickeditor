@@ -117,7 +117,7 @@ module.service('drive', ['$q', '$cacheFactory', 'googleApi', 'applicationId', fu
     return googleApi.then(function(gapi) {
       var deferred = $q.defer();
       var view = new google.picker.View(google.picker.ViewId.DOCS);
-      view.setMimeTypes('text/plain');
+      view.setMimeTypes('text/plain,text/csv,application/octet-stream');
       var picker = new google.picker.PickerBuilder()
         .setAppId(applicationId)
         .setOAuthToken(gapi.auth.getToken().access_token)
