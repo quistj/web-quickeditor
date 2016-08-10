@@ -147,7 +147,7 @@ module.controller('MainCtrl', ['$scope', '$http', '$location', '$routeParams', '
 
             $http({
                 method: 'POST',
-                url: 'http://local-api.oildex.com:8850/job',
+                url: 'https://dev-api.oildex.com/job',
                 headers: {
                      access_token: token,
                     'Content-Type': undefined
